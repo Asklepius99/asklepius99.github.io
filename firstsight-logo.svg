@@ -1,0 +1,44 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark circular background (charcoal/dark gray disc) -->
+  <circle cx="60" cy="60" r="55" fill="#1a1a1a"/>
+  <circle cx="60" cy="60" r="55" fill="url(#discGradient)" opacity="0.3"/>
+  
+  <!-- Location pin shape (orange-red neon) -->
+  <path d="M 60 18 L 78 36 L 78 58 Q 78 68 60 85 Q 42 68 42 58 L 42 36 Z" 
+        fill="none" 
+        stroke="#ff6b35" 
+        stroke-width="2.5" 
+        stroke-linejoin="round"
+        filter="url(#glow)"/>
+  
+  <!-- Central person (larger, forward) - rectangular body, circular head -->
+  <rect x="57" y="48" width="6" height="10" fill="none" stroke="#ff6b35" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="60" cy="45" r="3.5" fill="none" stroke="#ff6b35" stroke-width="2" filter="url(#glow)"/>
+  
+  <!-- Left person (smaller, behind) - curved body -->
+  <path d="M 46 50 Q 46 54 48 58" fill="none" stroke="#ff6b35" stroke-width="1.8" stroke-linecap="round" filter="url(#glow)"/>
+  <circle cx="48" cy="47" r="2.8" fill="none" stroke="#ff6b35" stroke-width="1.8" filter="url(#glow)"/>
+  
+  <!-- Right person (smaller, behind) - curved body -->
+  <path d="M 74 50 Q 74 54 72 58" fill="none" stroke="#ff6b35" stroke-width="1.8" stroke-linecap="round" filter="url(#glow)"/>
+  <circle cx="72" cy="47" r="2.8" fill="none" stroke="#ff6b35" stroke-width="1.8" filter="url(#glow)"/>
+  
+  <!-- Definitions -->
+  <defs>
+    <!-- Disc gradient for texture effect -->
+    <radialGradient id="discGradient" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.2"/>
+    </radialGradient>
+    
+    <!-- Neon glow effect -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>
+

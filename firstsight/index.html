@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Sight - Tanışmanın En Doğal Hali</title>
+    <link rel="stylesheet" href="../styles.css?v=4" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Modern ve Temiz Tasarım İçin Ek Stiller */
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar {
+        background: white;
+        border-bottom: 1px solid #eee;
+      }
+
+      /* Hero Alanı */
+      .app-hero {
+        background: linear-gradient(180deg, #ffffff 0%, #f4f4f4 100%);
+        padding: 4rem 1rem;
+        text-align: center;
+      }
+
+      .app-logo-container {
+        width: 140px;
+        height: 140px;
+        margin: 0 auto 1.5rem;
+        background: white;
+        border-radius: 28px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .app-logo-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 18px;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        color: #1a1a1a;
+      }
+
+      .hero-subtitle {
+        font-size: 1.25rem;
+        color: #666;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        line-height: 1.6;
+      }
+
+      /* Özellikler Grid */
+      .features-section {
+        padding: 4rem 1rem;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .feature-card {
+        background: white;
+        padding: 2.5rem 2rem;
+        border-radius: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        border: 1px solid #f0f0f0;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+      }
+
+      .feature-icon {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        display: block;
+      }
+
+      .feature-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #222;
+      }
+
+      .feature-desc {
+        color: #555;
+        line-height: 1.7;
+        font-size: 1rem;
+      }
+
+      /* Yasal & İletişim Alanı */
+      .info-footer {
+        background: #fff;
+        padding: 4rem 1rem;
+        text-align: center;
+        border-top: 1px solid #eee;
+        margin-top: 2rem;
+      }
+
+      .legal-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 2rem 0;
+      }
+
+      .btn {
+        padding: 14px 30px;
+        border-radius: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s;
+        display: inline-block;
+      }
+
+      .btn-dark {
+        background: #222;
+        color: white;
+        border: 2px solid #222;
+      }
+
+      .btn-dark:hover {
+        background: #000;
+        border-color: #000;
+        transform: scale(1.02);
+      }
+
+      .btn-light {
+        background: transparent;
+        color: #222;
+        border: 2px solid #ddd;
+      }
+
+      .btn-light:hover {
+        border-color: #222;
+        background: #fff;
+        transform: scale(1.02);
+      }
+
+      .contact-info {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid #f0f0f0;
+      }
+
+      .contact-link {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+      .contact-link:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2rem;
+        }
+
+        .feature-card {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div
+        class="container"
+        style="display: flex; align-items: center; padding: 1rem"
+      >
+        <a
+          href="../index.html"
+          style="text-decoration: none; color: #333; font-weight: 600"
+          >← Ana Sayfaya Dön</a
+        >
+      </div>
+    </nav>
+
+    <header class="app-hero">
+      <div class="container">
+        <div class="app-logo-container">
+          <img
+            src="../firstsight-logo.png"
+            alt="First Sight Logo"
+            class="app-logo-img"
+          />
+        </div>
+        <h1 class="hero-title">First Sight</h1>
+        <p class="hero-subtitle">
+          Gerçek hayatta tanışmanın en doğal hali. Konum bazlı eşleşme ve
+          etkinliklerle sosyalleşmenin sınırlarını kaldırın.
+        </p>
+      </div>
+    </header>
+
+    <section class="features-section">
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">📍</span>
+          <h3 class="feature-title">200 Metre Çapında Eşleşme</h3>
+          <p class="feature-desc">
+            Uygulama, sadece yakın çevrenizdeki (200 metre çapındaki) insanları
+            gösterir. Bir kafede veya kütüphanede göz göze geldiğiniz kişilerle
+            anında iletişim kurmanızı sağlar.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <span class="feature-icon">👁️</span>
+          <h3 class="feature-title">Görünürlük Kontrolü</h3>
+          <p class="feature-desc">
+            Görünür olmak tamamen sizin elinizde. Butona bastığınızda
+            çevrenizdeki diğer kullanıcıları tarar, siz de onlara görünür
+            olursunuz. Karşılıklı beğeni olduğunda eşleşme gerçekleşir.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <span class="feature-icon">🎟️</span>
+          <h3 class="feature-title">Etkinliklerle Sosyalleşin</h3>
+          <p class="feature-desc">
+            Sadece bireysel eşleşme değil, etkinlikler de burada! Etkinlikler
+            oluşturabilir, katılabilir ve o etkinliğe giden diğer katılımcılarla
+            önceden tanışıp eşleşebilirsiniz.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="info-footer">
+      <div class="container" style="max-width: 800px; margin: 0 auto">
+        <h2 style="margin-bottom: 1rem">Yasal Bilgilendirme</h2>
+        <p style="color: #666; margin-bottom: 2rem">
+          First Sight uygulamasını güvenle kullanmanız için gerekli tüm yasal
+          metinlere buradan ulaşabilirsiniz.
+        </p>
+
+        <div class="legal-buttons">
+          <a href="gizlilik/" class="btn btn-dark">Gizlilik Politikasını Oku</a>
+          <a href="sozlesme/" class="btn btn-light"
+            >Kullanıcı Sözleşmesini Oku</a
+          >
+        </div>
+
+        <div class="contact-info">
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem">
+            İletişim & Destek
+          </h3>
+          <p style="color: #666; margin-bottom: 0.5rem">
+            Her türlü soru ve öneriniz için bize ulaşın:
+          </p>
+          <a href="mailto:appfirstsight@gmail.com" class="contact-link"
+            >appfirstsight@gmail.com</a
+          >
+        </div>
+
+        <p style="margin-top: 3rem; color: #999; font-size: 0.9rem">
+          &copy; 2026 BuddyCo Apps. Tüm Hakları Saklıdır.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
