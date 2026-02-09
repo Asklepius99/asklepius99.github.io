@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>First Sight - Tanışmanın En Doğal Hali</title>
+  <link rel="stylesheet" href="../styles.css?v=5" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: white;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* Hero Alanı */
+    .app-hero {
+      background: linear-gradient(180deg, #ffffff 0%, #f4f4f4 100%);
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+
+    .app-logo-container {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 1.5rem;
+      background: white;
+      border-radius: 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .app-logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 18px;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: #1a1a1a;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    /* İçerik Bölümü */
+    .content-section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-block {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+      border: 1px solid #f0f0f0;
+      margin-bottom: 2rem;
+    }
+
+    .section-block h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #222;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-block h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.75rem;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-block p {
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .section-block ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0;
+    }
+
+    .section-block ul li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .section-block ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    .nested-list {
+      margin-left: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .nested-list li::before {
+      content: "◦";
+      color: #999;
+    }
+
+    /* Özellikler Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .feature-card {
+      background: #fafafa;
+      padding: 1.5rem;
+      border-radius: 16px;
+      border: 1px solid #eee;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    .feature-card h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+
+    .feature-card p {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #f5500f 0%, #ff6b35 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: 16px;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .highlight-box p {
+      color: white;
+      font-size: 1.1rem;
+      margin: 0;
+      opacity: 0.95;
+    }
+
+    .highlight-box strong {
+      display: block;
+      font-size: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Yasal & İletişim Alanı */
+    .info-footer {
+      background: #fff;
+      padding: 4rem 1rem;
+      text-align: center;
+      border-top: 1px solid #eee;
+      margin-top: 2rem;
+    }
+
+    .legal-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+
+    .btn {
+      padding: 14px 30px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-block;
+    }
+
+    .btn-dark {
+      background: #222;
+      color: white;
+      border: 2px solid #222;
+    }
+
+    .btn-dark:hover {
+      background: #000;
+      border-color: #000;
+      transform: scale(1.02);
+    }
+
+    .btn-light {
+      background: transparent;
+      color: #222;
+      border: 2px solid #ddd;
+    }
+
+    .btn-light:hover {
+      border-color: #222;
+      background: #fff;
+      transform: scale(1.02);
+    }
+
+    .contact-info {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .contact-link {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .section-block {
+        padding: 1.5rem;
+      }
+
+      .feature-card {
+        padding: 1.25rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container" style="display: flex; align-items: center; padding: 1rem">
+      <a href="../index.html" style="text-decoration: none; color: #333; font-weight: 600">← Ana Sayfaya Dön</a>
+    </div>
+  </nav>
+
+  <header class="app-hero">
+    <div class="container">
+      <div class="app-logo-container">
+        <img src="../firstsight-logo.png" alt="First Sight Logo" class="app-logo-img" />
+      </div>
+      <h1 class="hero-title">First Sight</h1>
+      <p class="hero-subtitle">
+        Gerçek hayatta, bulunduğun yerde insanlarla tanış. Etkinliklere katılıp tanış.
+      </p>
+    </div>
+  </header>
+
+  <section class="content-section">
+    <!-- Giriş -->
+    <div class="section-block">
+      <p style="font-size: 1.1rem; text-align: center;">
+        First Sight, insanları yalnızca dijital profiller üzerinden değil, aynı yerde ve aynı anda buluştukları anda
+        tanışmalarını, katıldıkları etkinlikten tanışmalarını hedefleyen <strong>konum ve etkinlik odaklı</strong> bir
+        eşleşme uygulamasıdır.
+      </p>
+      <p style="text-align: center; color: #666;">
+        Kaydır, keşfet ve yalnızca gerçekten yakınında veya aynı etkinlikte olduğun kişilerle bağlantı kur.
+      </p>
+    </div>
+
+    <!-- Eşleşme Sayfası -->
+    <div class="section-block">
+      <h2>🔄 Eşleşme Sayfası</h2>
+
+      <h3>📍 Yakın Modu</h3>
+      <p>Yakın Modu aktif ettiğinde, <strong>200 metre çapındaki kullanıcılarla</strong> eşleşebilirsin. Bu mod yalnızca
+        sen aktifken çalışır ve diğer kullanıcılar seni sadece bu süre boyunca görebilir.</p>
+      <ul>
+        <li>Yakın Modu manuel olarak açılır</li>
+        <li>Belirli bir süre aktif kullanıcı bulunamazsa, uygulama sana aktif kalmak isteyip istemediğini sorar</li>
+        <li>Aktif kalmayı seçersen, konumun belirli bir süre sabitlenir ve görünür olmaya devam edersin</li>
+      </ul>
+
+      <h3>🎉 Etkinlik Modu</h3>
+      <p>Katıldığın etkinliklerde bulunan diğer kullanıcılarla eşleşmeni sağlar. Böylece aynı ortamda bulunan kişilerle
+        kolayca bağlantı kurabilirsin.</p>
+    </div>
+
+    <!-- Kart Sistemi -->
+    <div class="section-block">
+      <h2>🧑‍🤝‍🧑 Kart Sistemi</h2>
+      <p>Kullanıcılar kart şeklinde gösterilir:</p>
+      <ul>
+        <li>Sağa / sola kaydırarak etkileşim</li>
+        <li>Biyografi önizlemesi</li>
+        <li>İstersen profil detaylarını görüntüleyebilme</li>
+      </ul>
+    </div>
+
+    <!-- Profil Sayfası -->
+    <div class="section-block">
+      <h2>👤 Profil Sayfası</h2>
+      <p>Kullanıcılar profillerini kendilerine göre özelleştirebilir:</p>
+      <ul>
+        <li>6 adede kadar fotoğraf yükleme</li>
+        <li>Biyografi ekleme</li>
+        <li>Kullanım amacı seçme</li>
+        <li>İlgi alanlarını belirtme</li>
+        <li>Evcil hayvan bilgisi ekleme</li>
+      </ul>
+    </div>
+
+    <!-- Etkinlikler Sayfası -->
+    <div class="section-block">
+      <h2>📅 Etkinlikler Sayfası</h2>
+      <p>First Sight, sosyal hayatı uygulamanın merkezine alır.</p>
+      <ul>
+        <li>Etkinlikleri görüntüleme ve katılma</li>
+        <li>Etkinlik organizatörüne doğrudan ulaşma</li>
+        <li>Şehir ve ada göre filtreleme</li>
+        <li>Etkinlik yorumlarını görme ve yorum yapma</li>
+        <li>Kullanıcıların kendi etkinliklerini oluşturabilmesi
+          <ul class="nested-list">
+            <li>Herkese açık etkinlikler</li>
+            <li>Şifre ile girilen özel etkinlikler</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Sohbet -->
+    <div class="section-block">
+      <h2>💬 Sohbet</h2>
+      <p>Eşleştiğin kullanıcılarla:</p>
+      <ul>
+        <li>Mesajlaşabilir</li>
+        <li>Fotoğraf gönderebilirsin</li>
+        <li>İstersen tek seferlik görüntülenen fotoğraflar paylaşabilirsin</li>
+        <li>İstediğin zamanda eşleşmeyi sonlandırabilirsin</li>
+      </ul>
+    </div>
+
+    <!-- Güvenlik ve Kontrol -->
+    <div class="section-block">
+      <h2>🔒 Güvenlik ve Kontrol</h2>
+      <ul>
+        <li>Kullanıcılar uygunsuz davranışları raporlayabilir</li>
+        <li>Eşleşme ve sohbet yalnızca karşılıklı onayla gerçekleşir</li>
+        <li>Gizlilik ve kullanıcı kontrolü ön plandadır</li>
+        <li><a href="hesap-silme/" style="color: #007bff; text-decoration: none; font-weight: 500;">Hesap bilgilerini
+            silme</a> - Hesabınızı ve verilerinizi kalıcı olarak silebilirsiniz</li>
+      </ul>
+    </div>
+
+    <!-- Son Mesaj -->
+    <div class="highlight-box">
+      <p>First Sight ile tanışmalar tesadüf değil, aynı anın bir sonucu olur.</p>
+      <strong>Belki de aradığın kişi, zaten bulunduğun yerdedir.</strong>
+    </div>
+  </section>
+
+  <footer class="info-footer">
+    <div class="container" style="max-width: 800px; margin: 0 auto">
+      <h2 style="margin-bottom: 1rem">Yasal Bilgilendirme</h2>
+      <p style="color: #666; margin-bottom: 2rem">
+        First Sight uygulamasını güvenle kullanmanız için gerekli tüm yasal
+        metinlere buradan ulaşabilirsiniz.
+      </p>
+
+      <div class="legal-buttons">
+        <a href="guvenlik/" class="btn btn-dark">Güvenlik Politikası</a>
+        <a href="gizlilik/" class="btn btn-light">Gizlilik Politikası</a>
+        <a href="sozlesme/" class="btn btn-light">Kullanıcı Sözleşmesi</a>
+        <a href="kullanim-sartlari/" class="btn btn-light">Kullanım Şartları</a>
+      </div>
+
+      <div class="contact-info">
+        <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem">
+          İletişim & Destek
+        </h3>
+        <p style="color: #666; margin-bottom: 0.5rem">
+          Her türlü soru ve öneriniz için bize ulaşın:
+        </p>
+        <a href="mailto:appfirstsight@gmail.com" class="contact-link">appfirstsight@gmail.com</a>
+      </div>
+
+      <p style="margin-top: 3rem; color: #999; font-size: 0.9rem">
+        &copy; 2026 BuddyCo Apps. Tüm Hakları Saklıdır.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

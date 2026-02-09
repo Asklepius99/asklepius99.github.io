@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Sight - Hesap Silme Yönergesi</title>
+    <link rel="stylesheet" href="../../styles.css?v=5" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Hero Alanı */
+        .app-hero {
+            background: linear-gradient(180deg, #ffffff 0%, #f4f4f4 100%);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .app-logo-container {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 1.5rem;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .app-logo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 18px;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+
+        /* İçerik Bölümü */
+        .content-section {
+            padding: 3rem 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-block {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            border: 1px solid #f0f0f0;
+            margin-bottom: 2rem;
+        }
+
+        .section-block h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #222;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-block h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-block p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .section-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0;
+        }
+
+        .section-block ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .section-block ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        /* Adım Kartları */
+        .step-card {
+            background: #fafafa;
+            padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid #eee;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: #333;
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-right: 0.75rem;
+        }
+
+        .step-card h3 {
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0 0 0.75rem 0;
+            color: #222;
+        }
+
+        .step-card p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Uyarı Kutusu */
+        .warning-box {
+            background: #f8f9fa;
+            color: #333;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            border: 1px solid #eee;
+        }
+
+        .warning-box h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #333;
+        }
+
+        .warning-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .warning-box ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .warning-box ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #f5500f;
+            font-weight: bold;
+        }
+
+        /* E-posta Highlight */
+        .email-highlight {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 1rem 0;
+            border: 1px solid #eee;
+        }
+
+        .email-highlight a {
+            color: #f5500f;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+        }
+
+        .email-highlight a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .info-footer {
+            background: #fff;
+            padding: 3rem 1rem;
+            text-align: center;
+            border-top: 1px solid #eee;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .btn-dark {
+            background: #222;
+            color: white;
+            border: 2px solid #222;
+        }
+
+        .btn-dark:hover {
+            background: #000;
+            border-color: #000;
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .section-block {
+                padding: 1.5rem;
+            }
+
+            .step-card {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container" style="display: flex; align-items: center; padding: 1rem">
+            <a href="../" style="text-decoration: none; color: #333; font-weight: 600">← First Sight Ana Sayfasına
+                Dön</a>
+        </div>
+    </nav>
+
+    <header class="app-hero">
+        <div class="container">
+            <div class="app-logo-container">
+                <img src="../../firstsight-logo.png" alt="First Sight Logo" class="app-logo-img" />
+            </div>
+            <h1 class="hero-title">Hesap Silme Yönergesi</h1>
+            <p class="hero-subtitle">
+                Bu işlemler First Sight uygulamasında kullanılan hesap verileriniz için geçerlidir.
+            </p>
+        </div>
+    </header>
+
+    <section class="content-section">
+        <div class="section-block">
+            <h2>📧 Hesabınızı Nasıl Silebilirsiniz?</h2>
+            <p>Hesabınızı silmek istiyorsanız, lütfen aşağıdaki adımları takip edin:</p>
+
+            <div class="step-card">
+                <h3><span class="step-number">1</span> E-posta Gönderme</h3>
+                <p>Hesap sahibi olarak, silme talebinizi aşağıdaki e-posta adresine gönderin. Lütfen e-posta konusuna
+                    <strong>"Hesap Silme Talebi"</strong> yazın.</p>
+                <div class="email-highlight">
+                    <a href="mailto:appfirstsight@gmail.com">appfirstsight@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <h3><span class="step-number">2</span> Ek Bilgiler</h3>
+                <p>Hesabınızı doğrulamak ve güvenliğinizi sağlamak için <strong>Adınız ve Soyadınızı</strong> e-posta
+                    içeriğine ekleyin. Gerekli durumlarda hesabın size ait olduğunu doğrulamak adına ek bilgi talep
+                    edilebilir.</p>
+            </div>
+
+            <div class="step-card">
+                <h3><span class="step-number">3</span> Onay ve İşlem</h3>
+                <p>Gönderdiğiniz e-posta alındıktan sonra, talebiniz ekibimiz tarafından değerlendirilecektir.</p>
+                <p>Onay alındıktan sonra, kişisel verileriniz ve uygulamaya yüklediğiniz fotoğraflar sistemlerimizden
+                    <strong>kalıcı olarak silinecektir</strong>.</p>
+            </div>
+
+            <div class="warning-box">
+                <h3>⚠️ Dikkat Edilmesi Gerekenler</h3>
+                <ul>
+                    <li><strong>Geri Alınamaz İşlem:</strong> Hesap silme işlemi tamamlandıktan sonra geri alınamaz.
+                    </li>
+                    <li><strong>Veri Kaybı:</strong> Hesabınızla ilişkili tüm eşleşmeler, mesajlar ve profil bilgileri
+                        kalıcı olarak kaybolacaktır. Önemli verileriniz varsa silme işleminden önce kontrol etmenizi
+                        öneririz.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="info-footer">
+        <div class="container" style="max-width: 800px; margin: 0 auto">
+            <p style="color: #666; margin-bottom: 1.5rem">
+                Sorularınız için bize ulaşabilirsiniz.
+            </p>
+            <a href="../" class="btn btn-dark">First Sight Ana Sayfasına Dön</a>
+            <p style="margin-top: 2rem; color: #999; font-size: 0.9rem">
+                &copy; 2026 BuddyCo Apps. Tüm Hakları Saklıdır.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
