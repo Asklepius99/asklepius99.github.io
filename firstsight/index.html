@@ -277,6 +277,23 @@
         padding: 1.25rem;
       }
     }
+
+    /* Play Store Badge */
+    .play-store-badge {
+      display: inline-block;
+      margin-top: 0.5rem;
+      transition: transform 0.2s ease;
+      vertical-align: middle;
+    }
+
+    .play-store-badge:hover {
+      transform: scale(1.05);
+    }
+
+    .play-store-badge img {
+      height: 64px;
+      display: block;
+    }
   </style>
 </head>
 
@@ -296,6 +313,9 @@
       <p class="hero-subtitle">
         Gerçek hayatta, bulunduğun yerde insanlarla tanış. Etkinliklere katılıp tanış.
       </p>
+      <a href="https://play.google.com/store/apps/details?id=com.buddyco.firstsight" target="_blank" class="play-store-badge">
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/tr_badge_web_generic.png" alt="Google Play'den Alın" />
+      </a>
     </div>
   </header>
 
